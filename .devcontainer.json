@@ -1,5 +1,5 @@
 {
-    "name": "basnijholt/adaptive_lighting",
+    "name": "dopsi/french_oceanographic_fleet",
     "image": "mcr.microsoft.com/vscode/devcontainers/python:0-3.11-bullseye",
     "postCreateCommand": "scripts/setup",
     "forwardPorts": [
@@ -11,6 +11,10 @@
             "onAutoForward": "notify"
         }
     },
+    "mounts": [
+        // Custom component
+        "source=${localWorkspaceFolder}/custom_components/french_oceanographic_fleet,target=/config/custom_components/french_oceanographic_fleet,type=bind"
+    ],
     "customizations": {
         "vscode": {
             "extensions": [
