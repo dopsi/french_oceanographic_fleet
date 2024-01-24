@@ -1,0 +1,41 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Device is already configured"
+        },
+        "error": {
+            "cannot_connect": "Failed to connect",
+            "invalid_ship": "Invalid ship name",
+            "unknown": "Unexpected error"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "ship": "Ship name"
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "air_pressure": {
+                "name": "Air pressure"
+            },
+            "air_temperature": {
+                "name": "Air temperature"
+            },
+            "last_update": {
+                "name": "Last update"
+            },
+            "water_depth": {
+                "name": "Water depth"
+            },
+            "water_temperature": {
+                "name": "Water temperature"
+            },
+            "wind_speed": {
+                "name": "Wind speed"
+            }
+        }
+    }
+}

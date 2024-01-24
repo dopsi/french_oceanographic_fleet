@@ -1,0 +1,16 @@
+{
+  "domain": "french_oceanographic_fleet",
+  "name": "French Oceanographic Fleet",
+  "codeowners": [
+    "@dopsi"
+  ],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://www.home-assistant.io/integrations/french_oceanographic_fleet",
+  "homekit": {},
+  "iot_class": "cloud_polling",
+  "requirements": [],
+  "ssdp": [],
+  "zeroconf": [],
+  "version": "0.0.0"
+}

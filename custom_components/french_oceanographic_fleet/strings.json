@@ -1,0 +1,41 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "ship": "Ship name"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "[%key:common::config_flow::error::cannot_connect%]",
+      "invalid_ship": "Invalid ship name",
+      "unknown": "[%key:common::config_flow::error::unknown%]"
+    },
+    "abort": {
+      "already_configured": "[%key:common::config_flow::abort::already_configured_device%]"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "air_temperature": {
+        "name": "Air temperature"
+      },
+      "water_temperature": {
+        "name": "Water temperature"
+      },
+      "last_update": {
+        "name": "Last update"
+      },
+      "wind_speed": {
+        "name": "Wind speed"
+      },
+      "water_depth": {
+        "name": "Water depth"
+      },
+      "air_pressure": {
+        "name": "Air pressure"
+      }
+    }
+  }
+}
