@@ -13,7 +13,7 @@ from homeassistant.exceptions import HomeAssistantError
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 
 from .const import CONF_SHIP, DOMAIN, SHIP_ID, SHIP_NAME
-from .fleet import FleetApi
+from . import FleetApi
 
 _LOGGER = logging.getLogger(__name__)
 
