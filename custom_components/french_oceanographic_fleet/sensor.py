@@ -29,7 +29,7 @@ SCAN_INTERVAL = timedelta(seconds=90)
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
     {
-        vol.Optional(CONF_NAME): cv.string,
+        vol.Required(CONF_NAME): cv.string,
     }
 )
 
