@@ -6,23 +6,14 @@ CONF_SHIP_ID = "ship_id"
 CONF_SHIP_NAME = "ship_name"
 
 SHIP_ID = {
-    "ANTEA": "ANTEA",
     "Antea": "ANTEA",
-    "CDLM": "CDLM",
     "Côtes de la Manche": "CDLM",
-    "ATALANTE": "ATALANTE",
     "L'Atalante": "ATALANTE",
-    "EUROPE": "EUROPE",
     "L'Europe": "EUROPE",
-    "MARION": "MARION",
     "Marion-Dufresne": "MARION",
-    "POURQUOIPAS": "POURQUOIPAS",
     "Pourquoi Pas ?": "POURQUOIPAS",
-    "TETHYS": "TETHYS",
     "Tethys II": "TETHYS",
-    "THALASSA": "THALASSA",
     "Thalassa": "THALASSA",
-    "TH": "TH",
     "Thalia": "TH",
 }
 
