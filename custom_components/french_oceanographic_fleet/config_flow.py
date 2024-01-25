@@ -13,7 +13,7 @@ from homeassistant.exceptions import HomeAssistantError
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 
 from .const import CONF_SHIP, DOMAIN, SHIP_ID, SHIP_NAME
-from . import FleetApi
+from .fleet_api import FleetApi
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -30,15 +30,16 @@ async def validate_input(hass: HomeAssistant, data: dict[str, Any]) -> dict[str,
 
     Data has the keys from STEP_USER_DATA_SCHEMA with values provided by the user.
     """
+    print(data)
     try:
-        ship_name = SHIP_ID[data[CONF_SHIP]]
+        ship_id = SHIP_ID[data[CONF_SHIP_NAME]]
     except KeyError:
         raise ShipNotFound
 
     session = async_get_clientsession(hass)
 
     ship = FleetApi(
-        ship=ship_name,
+        ship_id=ship_id,
         session=session,
         logger=_LOGGER,
     )
