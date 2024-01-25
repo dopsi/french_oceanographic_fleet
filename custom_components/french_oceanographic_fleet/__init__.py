@@ -9,7 +9,7 @@ from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 
-from .const import DOMAIN
+from .const import CONF_SHIP_ID, DOMAIN
 from .coordinator import FrenchOceanographicFleetUpdateCoordinator
 from .fleet_api import FleetApi
 
@@ -24,7 +24,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     session = async_get_clientsession(hass)
     api = FleetApi(
-        ship=entry.data["ship"],
+        ship_id=entry.data[CONF_SHIP_ID],
         session=session,
         logger=_LOGGER,
     )

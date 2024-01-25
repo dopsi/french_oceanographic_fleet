@@ -11,7 +11,7 @@ from homeassistant.helpers.device_registry import DeviceEntryType, DeviceInfo
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
-from .const import DOMAIN, SHIP_NAME
+from .const import CONF_SHIP_ID, DOMAIN, SHIP_NAME
 from .coordinator import FrenchOceanographicFleetUpdateCoordinator
 
 _LOGGER = logging.getLogger(__name__)
@@ -89,7 +89,7 @@ async def async_setup_entry(
     async_add_entities(
         [
             FleetShipEntity(
-                coordinator, unique_id, ship_name=SHIP_NAME[entry.data["ship"]]
+                coordinator, unique_id, ship_name=SHIP_NAME[entry.data[CONF_SHIP_ID]]
             )
         ]
     )

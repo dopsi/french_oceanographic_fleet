@@ -2,7 +2,8 @@
 
 DOMAIN = "french_oceanographic_fleet"
 
-CONF_SHIP = "ship"
+CONF_SHIP_ID = "ship_id"
+CONF_SHIP_NAME = "ship_name"
 
 SHIP_ID = {
     "ANTEA": "ANTEA",
