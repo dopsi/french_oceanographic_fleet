@@ -11,6 +11,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.data_entry_flow import FlowResult
 from homeassistant.exceptions import HomeAssistantError
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
+from homeassistant.helpers.selector import selector
 
 from .const import CONF_SHIP_ID, CONF_SHIP_NAME, DOMAIN, SHIP_ID, SHIP_NAME
 from .fleet_api import FleetApi
@@ -20,7 +21,13 @@ _LOGGER = logging.getLogger(__name__)
 
 STEP_USER_DATA_SCHEMA = vol.Schema(
     {
-        vol.Required(CONF_SHIP): str,
+        vol.Required(CONF_SHIP_NAME): selector(
+                {
+                    "select": {
+                        "options": list(SHIP_ID),
+                    }
+                }
+            ),
     }
 )
 
